@@ -156,21 +156,6 @@ class Guesser:
         self.parent.close()
 
 
-
-class Objects:
-    
-    def __init__(self):
-        self._guesser = None
-    
-    def guesser(self):
-        if not self._guesser:
-            self._guesser = Guesser()
-        return self._guesser
-
-
-objs = Objects()
-
-
 if __name__ == '__main__':
     sg.objs.start()
     guesser = Guesser()

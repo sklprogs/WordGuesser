@@ -16,6 +16,7 @@ class Guesser:
     def __init__(self):
         self.logic = lg.Guesser()
         self.gui   = gi.Guesser()
+        self.gui.close()
         self.bindings()
         
     def bindings(self):
