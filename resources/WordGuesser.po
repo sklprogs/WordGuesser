@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordGuesser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-24 14:40+0300\n"
-"PO-Revision-Date: 2018-08-24 14:44+0300\n"
+"POT-Creation-Date: 2018-08-24 17:38+0300\n"
+"PO-Revision-Date: 2018-08-24 17:40+0300\n"
 "Last-Translator: Peter Sklyar <skl.progs@gmail.com>\n"
 "Language-Team: Peter Sklyar <skl.progs@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -76,11 +76,11 @@ msgstr ""
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2975
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2991
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:3003
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3176
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3207
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3360
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3804
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3887
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3240
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3271
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3424
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3868
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3951
 #: /usr/local/bin/WordGuesser/src/shared.py:208
 #: /usr/local/bin/WordGuesser/src/shared.py:214
 #: /usr/local/bin/WordGuesser/src/shared.py:223
@@ -121,6 +121,7 @@ msgstr ""
 #: /usr/local/bin/WordGuesser/src/shared.py:4253
 #: /usr/local/bin/WordGuesser/src/shared.py:4274
 #: /usr/local/bin/WordGuesser/src/shared.py:4329
+#: /usr/local/bin/WordGuesser/src/guesser/logic.py:31
 msgid "ERROR"
 msgstr "ОШИБКА"
 
@@ -151,9 +152,10 @@ msgstr "Недопустимые входные данные: \"%s\""
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2359
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2370
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2465
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3094
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3361
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3793
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3088
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3158
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3425
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3857
 #: /usr/local/bin/WordGuesser/src/shared.py:542
 #: /usr/local/bin/WordGuesser/src/shared.py:753
 #: /usr/local/bin/WordGuesser/src/shared.py:856
@@ -164,6 +166,7 @@ msgstr "Недопустимые входные данные: \"%s\""
 #: /usr/local/bin/WordGuesser/src/shared.py:3593
 #: /usr/local/bin/WordGuesser/src/shared.py:4214
 #: /usr/local/bin/WordGuesser/src/shared.py:4399
+#: /usr/local/bin/WordGuesser/src/guesser/logic.py:32
 msgid "Wrong input data!"
 msgstr "Недопустимые входные данные!"
 
@@ -222,16 +225,18 @@ msgstr "Не удалось выбрать файл!"
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2818
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2981
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2998
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3069
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3093
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3168
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3310
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3389
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3400
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3792
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3798
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3900
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3926
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3087
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3092
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3133
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3157
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3232
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3374
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3453
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3464
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3856
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3862
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3964
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3990
 #: /usr/local/bin/WordGuesser/src/regexp.py:51
 #: /usr/local/bin/WordGuesser/src/regexp.py:63
 #: /usr/local/bin/WordGuesser/src/regexp.py:70
@@ -387,9 +392,10 @@ msgstr "Не удалось выбрать файл!"
 #: /usr/local/bin/WordGuesser/src/shared.py:4349
 #: /usr/local/bin/WordGuesser/src/shared.py:4388
 #: /usr/local/bin/WordGuesser/src/shared.py:4398
-#: /usr/local/bin/WordGuesser/src/guesser/logic.py:48
-#: /usr/local/bin/WordGuesser/src/guesser/logic.py:53
-#: /usr/local/bin/WordGuesser/src/guesser/logic.py:73
+#: /usr/local/bin/WordGuesser/src/guesser/logic.py:36
+#: /usr/local/bin/WordGuesser/src/guesser/logic.py:63
+#: /usr/local/bin/WordGuesser/src/guesser/logic.py:68
+#: /usr/local/bin/WordGuesser/src/guesser/logic.py:88
 msgid "WARNING"
 msgstr "ПРЕДУПРЕЖДЕНИЕ"
 
@@ -454,7 +460,7 @@ msgstr "Файл \"%s\" не найден!"
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:998
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2892
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2903
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3288
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3352
 msgid "Title:"
 msgstr "Заголовок:"
 
@@ -481,11 +487,11 @@ msgstr "Найти:"
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2715
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2798
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2819
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3160
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3192
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3199
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3317
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3972
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3224
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3256
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3263
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3381
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:4036
 #: /usr/local/bin/WordGuesser/src/shared.py:325
 #: /usr/local/bin/WordGuesser/src/shared.py:406
 #: /usr/local/bin/WordGuesser/src/shared.py:460
@@ -547,8 +553,8 @@ msgstr "Совпадений нет!"
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2716
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2733
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2749
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3901
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3927
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3965
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3991
 #: /usr/local/bin/WordGuesser/src/regexp.py:71
 #: /usr/local/bin/WordGuesser/src/regexp.py:87
 #: /usr/local/bin/WordGuesser/src/regexp.py:128
@@ -641,8 +647,8 @@ msgstr "Совпадений нет!"
 #: /usr/local/bin/WordGuesser/src/shared.py:4316
 #: /usr/local/bin/WordGuesser/src/shared.py:4336
 #: /usr/local/bin/WordGuesser/src/shared.py:4350
-#: /usr/local/bin/WordGuesser/src/guesser/logic.py:54
-#: /usr/local/bin/WordGuesser/src/guesser/logic.py:74
+#: /usr/local/bin/WordGuesser/src/guesser/logic.py:69
+#: /usr/local/bin/WordGuesser/src/guesser/logic.py:89
 msgid "Operation has been canceled."
 msgstr "Операция отменена."
 
@@ -664,10 +670,11 @@ msgstr "Совпадений больше нет, поиск продолжен 
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:1742
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:1764
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2982
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3070
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3390
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3401
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3799
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3093
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3134
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3454
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3465
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3863
 #: /usr/local/bin/WordGuesser/src/shared.py:585
 #: /usr/local/bin/WordGuesser/src/shared.py:1602
 #: /usr/local/bin/WordGuesser/src/shared.py:1966
@@ -679,7 +686,8 @@ msgstr "Совпадений больше нет, поиск продолжен 
 #: /usr/local/bin/WordGuesser/src/shared.py:4196
 #: /usr/local/bin/WordGuesser/src/shared.py:4219
 #: /usr/local/bin/WordGuesser/src/shared.py:4239
-#: /usr/local/bin/WordGuesser/src/guesser/logic.py:49
+#: /usr/local/bin/WordGuesser/src/guesser/logic.py:37
+#: /usr/local/bin/WordGuesser/src/guesser/logic.py:64
 msgid "Empty input is not allowed!"
 msgstr "Пустые входные данные не допускаются!"
 
@@ -748,8 +756,8 @@ msgstr "Не удалось сдвинуть экран до метки \"%s\"!"
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:1596
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2978
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:3008
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3915
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3920
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3979
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3984
 #: /usr/local/bin/WordGuesser/src/shared.py:196
 #: /usr/local/bin/WordGuesser/src/shared.py:2639
 #: /usr/local/bin/WordGuesser/src/shared.py:3102
@@ -795,7 +803,7 @@ msgstr "Недостаточно входных данных!"
 
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:1381
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:1920
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3973
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:4037
 #: /usr/local/bin/WordGuesser/src/shared.py:4445
 msgid "Nothing to do!"
 msgstr "Действие не требуется."
@@ -804,8 +812,8 @@ msgstr "Действие не требуется."
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:1946
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2680
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2816
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3805
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3888
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3869
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3952
 #: /usr/local/bin/WordGuesser/src/shared.py:345
 #: /usr/local/bin/WordGuesser/src/shared.py:1954
 #, python-format
@@ -897,7 +905,7 @@ msgstr "КРИТИЧЕСКАЯ ОШИБКА"
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2819
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2861
 #: /usr/local/bin/WordGuesser/src/sharedGUI.py:2867
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3184
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3248
 #: /usr/local/bin/WordGuesser/src/shared.py:159
 msgid "QUESTION"
 msgstr "ВОПРОС"
@@ -941,70 +949,70 @@ msgstr "Произошла неизвестная ошибка."
 msgid "Failed to paste the clipboard contents!"
 msgstr "Ошибка вставки из буфера обмена."
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3161
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3225
 #, python-format
 msgid "Add %s"
 msgstr "Добавить %s"
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3200
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3264
 #, python-format
 msgid "Close %d objs"
 msgstr "Закрыть %d объектов"
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3208
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3272
 #, python-format
 msgid "Widget \"%s\" does not have a \"close\" action!"
 msgstr "У виджета \"%s\" нет действия \"close\"!"
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3311
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3318
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3375
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3382
 #: /usr/local/bin/WordGuesser/src/shared.py:2807
 #: /usr/local/bin/WordGuesser/src/shared.py:2852
 msgid "Nothing to do."
 msgstr "Действие не требуется."
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3465
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3529
 msgid "Compare texts:"
 msgstr "Сравните тексты:"
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3605
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3669
 #, python-format
 msgid "File: \"%s\"; %d/%d MB; Rate: %s kbps; ETA: %ss"
 msgstr "Файл: \"%s\"; %d/%d Мб; Скорость: %s Кб/с; Осталось: %sс"
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3649
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3713
 msgid "Download progress"
 msgstr "Ход загрузок"
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3916
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3980
 #, python-format
 msgid "Widget 1 geometry: %dx%d+%d+%d"
 msgstr "Геометрия виджета 1: %dx%d+%d+%d"
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3921
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3985
 #, python-format
 msgid "Widget 2 geometry: %dx%d+%d+%d"
 msgstr "Геометрия виджета 2: %dx%d+%d+%d"
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3959
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:4023
 msgid "Select files:"
 msgstr "Выберите файлы:"
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3987
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:4051
 msgid "Toggle all"
 msgstr "Переключить все"
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3988
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:4052
 msgid "Mark/unmark all checkboxes"
 msgstr "Добавить/убрать все пометы"
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3993
-#: /usr/local/bin/WordGuesser/src/guesser/gui.py:59
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:4057
+#: /usr/local/bin/WordGuesser/src/guesser/gui.py:63
 msgid "Close"
 msgstr "Закрыть"
 
-#: /usr/local/bin/WordGuesser/src/sharedGUI.py:3994
-#: /usr/local/bin/WordGuesser/src/guesser/gui.py:60
+#: /usr/local/bin/WordGuesser/src/sharedGUI.py:4058
+#: /usr/local/bin/WordGuesser/src/guesser/gui.py:64
 msgid "Close this window"
 msgstr "Закрыть это окно"
 
@@ -1423,29 +1431,45 @@ msgstr "Слева ориентиров нет!"
 msgid "Unexpected end of text!"
 msgstr "Неожиданный конец текста!"
 
-#: /usr/local/bin/WordGuesser/src/guesser/gui.py:65
-msgid "Guess"
-msgstr "Угадать"
-
-#: /usr/local/bin/WordGuesser/src/guesser/gui.py:66
-msgid "Guess missing characters in the word"
-msgstr "Угадать отсутствующие символы"
-
-#: /usr/local/bin/WordGuesser/src/guesser/gui.py:78
-msgid "Enter a word to guess. Use a question mark, a dot or an underscore to set a missing character."
-msgstr "Введите слово для угадывания. Вместо отсутствующих символов используйте знак вопроса, точку или нижнее подчеркивание."
-
-#: /usr/local/bin/WordGuesser/src/guesser/gui.py:95
-msgid "Guessed words:"
-msgstr "Угаданные слова:"
-
-#: /usr/local/bin/WordGuesser/src/guesser/gui.py:107
+#: /usr/local/bin/WordGuesser/src/guesser/controller.py:42
+#: /usr/local/bin/WordGuesser/src/guesser/gui.py:21
+#: /usr/local/bin/WordGuesser/src/guesser/gui.py:116
 msgid "No match"
 msgstr "Совпадений нет"
 
-#: /usr/local/bin/WordGuesser/src/guesser/gui.py:139
+#: /usr/local/bin/WordGuesser/src/guesser/gui.py:69
+msgid "Guess"
+msgstr "Угадать"
+
+#: /usr/local/bin/WordGuesser/src/guesser/gui.py:70
+msgid "Guess missing characters in the word"
+msgstr "Угадать отсутствующие символы"
+
+#: /usr/local/bin/WordGuesser/src/guesser/gui.py:87
+msgid "Enter a word to guess. Use a question mark, a dot or an underscore to set a missing character."
+msgstr "Введите слово для угадывания. Вместо отсутствующих символов используйте знак вопроса, точку или нижнее подчеркивание."
+
+#: /usr/local/bin/WordGuesser/src/guesser/gui.py:104
+msgid "Guessed words:"
+msgstr "Угаданные слова:"
+
+#: /usr/local/bin/WordGuesser/src/guesser/gui.py:149
+#: /usr/local/bin/WordGuesser/src/menu/gui.py:33
 msgid "Word Guesser"
 msgstr "Угадать слово"
+
+#: /usr/local/bin/WordGuesser/src/scrambler/gui.py:29
+msgid "Not implemented yet!"
+msgstr "Еще не реализовано!"
+
+#: /usr/local/bin/WordGuesser/src/scrambler/gui.py:43
+#: /usr/local/bin/WordGuesser/src/menu/gui.py:37
+msgid "Word Scrambler"
+msgstr "Перемешать буквы"
+
+#: /usr/local/bin/WordGuesser/src/menu/gui.py:74
+msgid "Word Puzzles"
+msgstr "Словесные головоломки"
 
 #~ msgid "Text with instructions:"
 #~ msgstr "Текст с инструкциями:"
