@@ -132,11 +132,12 @@ class Guesser:
         self.frames()
         self.widgets()
         self.buttons()
-        self.bindings()
         self.icon()
         self.title()
         self.region()
         self.scrollbars()
+        self.bindings()
+        self.cvs.top_bindings(top=self.parent)
     
     def icon(self,path=None):
         if not path:
