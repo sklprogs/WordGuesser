@@ -13,10 +13,11 @@ gettext.install('WordGuesser','../resources/locale')
 class Menu:
 
     def __init__(self):
-        self.guesser = gc.Guesser()
+        pass
 
 
 if __name__ == '__main__':
     sg.objs.start()
-    menu = Menu()
+    #menu = Menu()
+    gc.Guesser().show()
     sg.objs.end()

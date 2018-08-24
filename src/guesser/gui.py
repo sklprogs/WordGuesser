@@ -18,6 +18,10 @@ class Guesser:
         self.parent = sg.Top(parent=sg.objs.root())
         self.gui()
         
+    def reset(self,text=_('No match')):
+        self.ent1.clear_text()
+        self.lbl3.text(text)
+    
     def bindings(self):
         sg.bind (obj      = self.parent
                 ,bindings = ['<Control-w>','<Control-q>','<Escape>']
@@ -32,7 +36,7 @@ class Guesser:
         self.frm2 = sg.Frame (parent = self.frm
                              ,expand = False
                              ,propag = False
-                             ,height = 70
+                             ,height = 100
                              )
         self.frmy = sg.Frame (parent = self.frm2
                              ,expand = False

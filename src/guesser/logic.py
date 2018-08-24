@@ -20,13 +20,28 @@ class Guesser:
         self.lst     = []
         self.word    = ''
     
+    def reset(self,word):
+        if word:
+            if isinstance(word,str):
+                self.word = word
+                self.word = self.word.lower()
+                self.word = self.word.replace('.','?').replace('_','?')
+            else:
+                sh.log.append ('Guesser.reset'
+                              ,_('ERROR')
+                              ,_('Wrong input data!')
+                              )
+        else:
+            sh.log.append ('Guesser.reset'
+                          ,_('WARNING')
+                          ,_('Empty input is not allowed!')
+                          )
+    
     def search(self):
         if self.Success:
             if self.word:
                 timer = sh.Timer(func_title='Guesser.search')
                 timer.start()
-                self.word = self.word.lower()
-                self.word = self.word.replace('.','?').replace('_','?')
                 lst = [word for word in self.lst \
                        if len(word) == len(self.word)
                       ]
