@@ -70,13 +70,18 @@ class Guesser:
                               ,hint   = _('Guess missing characters in the word')
                               )
     
-    def region(self,lines_no=1):
+    def region(self,height=20):
         self.cvs.region (x        = self._width
-                        ,y        = 22 * lines_no
+                        ,y        = height
                         ,x_border = 5
                         ,y_border = 5
                         )
         self.cvs.scroll()
+    
+    def update_scroll(self):
+        sg.objs.root().idle()
+        height = self.lbl3.widget.winfo_reqheight()
+        self.region(height=height)
     
     def widgets(self):
         message   = _('Enter a word to guess. Use a question mark, a dot or an underscore to set a missing character.')

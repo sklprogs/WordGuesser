@@ -39,6 +39,7 @@ class Guesser:
             self.gui.lbl3.text('\n'.join(search))
         else:
             self.gui.lbl3.text(_('No match'))
+        self.gui.update_scroll()
 
 
 if __name__ == '__main__':
