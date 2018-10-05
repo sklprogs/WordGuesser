@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 
-import shared as sh
+import shared    as sh
+import sharedGUI as sg
 
 import gettext, gettext_windows
 gettext_windows.setup_env()
@@ -21,26 +22,24 @@ class Guesser:
         self.word    = ''
     
     def reset(self,word):
+        f = 'guesser.logic.Guesser.reset'
         if word:
             if isinstance(word,str):
-                self.word = word
+                self.word = word.replace(' ','')
                 self.word = self.word.lower()
-                self.word = self.word.replace('.','?').replace('_','?')
+                self.word = self.word.replace('.','?').replace('_','?').replace('*','?')
             else:
-                sh.log.append ('Guesser.reset'
-                              ,_('ERROR')
-                              ,_('Wrong input data!')
-                              )
+                sh.objs.mes (f,_('ERROR')
+                            ,_('Wrong input data!')
+                            )
         else:
-            sh.log.append ('Guesser.reset'
-                          ,_('WARNING')
-                          ,_('Empty input is not allowed!')
-                          )
+            sh.com.empty(f)
     
     def search(self):
+        f = 'guesser.logic.Guesser.search'
         if self.Success:
             if self.word:
-                timer = sh.Timer(func_title='Guesser.search')
+                timer = sh.Timer(func_title=f)
                 timer.start()
                 lst = [word for word in self.lst \
                        if len(word) == len(self.word)
@@ -59,20 +58,15 @@ class Guesser:
                         words.append(item)
                 return words
             else:
-                sh.log.append ('Guesser.search'
-                              ,_('WARNING')
-                              ,_('Empty input is not allowed!')
-                              )
+                sh.com.empty(f)
         else:
-            sh.log.append ('Guesser.search'
-                          ,_('WARNING')
-                          ,_('Operation has been canceled.')
-                          )
+            sh.com.cancel(f)
     
     def load(self):
+        f = 'guesser.logic.Guesser.load'
         if self.Success:
             if not self.lst:
-                timer = sh.Timer(func_title='Guesser.load')
+                timer = sh.Timer(func_title=f)
                 timer.start()
                 iread        = sh.ReadTextFile(self.file)
                 text         = iread.get()
@@ -84,10 +78,7 @@ class Guesser:
                 timer.end()
             return self.lst
         else:
-            sh.log.append ('Guesser.load'
-                          ,_('WARNING')
-                          ,_('Operation has been canceled.')
-                          )
+            sh.com.cancel(f)
 
 
 if __name__ == '__main__':
