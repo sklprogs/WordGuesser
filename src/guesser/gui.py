@@ -120,12 +120,12 @@ class Guesser:
         self.ent1.focus()
         
     def scrollbars(self):
-        self.xscr = sg.Scrollbar (parent     = self.frmx
-                                 ,scroll     = self.cvs
-                                 ,Horizontal = True
+        self.xscr = sg.Scrollbar (parent = self.frmx
+                                 ,scroll = self.cvs
+                                 ,Horiz  = True
                                  )
-        self.yscr = sg.Scrollbar (parent     = self.frmy
-                                 ,scroll     = self.cvs
+        self.yscr = sg.Scrollbar (parent = self.frmy
+                                 ,scroll = self.cvs
                                  )
     
     def gui(self):
