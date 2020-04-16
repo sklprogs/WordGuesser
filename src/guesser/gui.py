@@ -4,8 +4,6 @@
 import skl_shared2.shared as sh
 from skl_shared2.localize import _
 
-PRODUCT = 'WordGuesser'
-VERSION = '1.0.1'
 ICON = sh.objs.get_pdir().add('..','resources','icon_64x64_solve.gif')
 
 
@@ -123,8 +121,7 @@ class Guesser:
     
     def set_gui(self):
         self.parent = sh.Top (icon   = ICON
-                             ,title  = sh.List([PRODUCT,VERSION]).space_items()
-                             ,AutoCr = False
+                             ,title  = _('Word Guesser')
                              )
         self.set_frames()
         self.set_widgets()

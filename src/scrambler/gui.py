@@ -22,7 +22,6 @@ class Scrambler:
     def set_gui(self):
         self.parent = sh.Top (icon   = ICON
                              ,title  = _('Word Scrambler')
-                             ,AutoCr = False
                              )
         sh.Label (parent = self.parent
                  ,text   = _('Not implemented yet!')
