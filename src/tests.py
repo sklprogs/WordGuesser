@@ -1,16 +1,13 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 
-import shared             as sh
-import sharedGUI          as sg
-import guesser.controller as gc
+import skl_shared2.shared as sh
+from skl_shared2.localize import _
 
-import gettext, gettext_windows
-gettext_windows.setup_env()
-gettext.install('WordGuesser','../resources/locale')
+import guesser.controller as gc
 
 
 if __name__ == '__main__':
-    sg.objs.start()
+    sh.com.start()
     gc.show()
-    sg.objs.end()
+    sh.com.end()

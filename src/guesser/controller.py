@@ -1,14 +1,11 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 
-import shared        as sh
-import sharedGUI     as sg
+import skl_shared2.shared as sh
+from skl_shared2.localize import _
+
 import guesser.logic as lg
 import guesser.gui   as gi
-
-import gettext, gettext_windows
-gettext_windows.setup_env()
-gettext.install('WordGuesser','../../resources/locale')
 
 
 class Guesser:
@@ -16,14 +13,13 @@ class Guesser:
     def __init__(self):
         self.logic = lg.Guesser()
         self.gui   = gi.Guesser()
-        self.gui.close()
-        self.bindings()
+        self.set_bindings()
         
-    def bindings(self):
-        sg.bind (obj      = self.gui.ent1
-                ,bindings = ['<Return>','<KP_Enter>']
-                ,action   = self.guess
-                )
+    def set_bindings(self):
+        sh.com.bind (obj      = self.gui.ent1
+                    ,bindings = ['<Return>','<KP_Enter>']
+                    ,action   = self.guess
+                    )
         self.gui.btn2.action = self.guess
     
     def show(self,event=None):
@@ -37,14 +33,13 @@ class Guesser:
         self.logic.reset(word=word)
         search = self.logic.search()
         if search:
-            self.gui.lbl3.text('\n'.join(search))
+            self.gui.lbl3.set_text('\n'.join(search))
         else:
-            self.gui.lbl3.text(_('No match'))
+            self.gui.lbl3.set_text(_('No match'))
         self.gui.update_scroll()
 
 
 if __name__ == '__main__':
-    sg.objs.start()
-    guesser = Guesser()
-    guesser.show()
-    sg.objs.end()
+    sh.com.start()
+    Guesser().show()
+    sh.com.end()
