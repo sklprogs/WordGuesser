@@ -108,7 +108,7 @@ class Guesser:
                              ,text   = _('No match')
                              ,expand = False
                              )
-        self.ent1.set_focus()
+        self.ent1.focus()
         
     def set_scroll(self):
         self.xscr = sh.Scrollbar (parent = self.frmx

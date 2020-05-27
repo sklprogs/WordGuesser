@@ -30,7 +30,7 @@ class Menu:
                               ,text   = _('Word Scrambler')
                               ,side   = 'top'
                               )
-        self.btn1.set_focus()
+        self.btn1.focus()
         
     # If this does not work, set 'takefocus=1'
     def focus_next(self,event=None):

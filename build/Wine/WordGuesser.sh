@@ -1,7 +1,7 @@
 #!/bin/bash
 
 product="WordGuesser"
-python="$HOME/.wine/drive_c/Python34"
+python="$HOME/.wine/drive_c/Python"
 pyinstaller="$python/Scripts/pyinstaller.exe"
 binariesdir="$HOME/binaries"
 srcdir="$HOME/bin/$product/src"
