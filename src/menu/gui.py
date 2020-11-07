@@ -15,7 +15,7 @@ class Menu:
         self.set_gui()
         
     def set_gui(self):
-        self.parent = sh.Top (icon  = ICON
+        self.parent = sh.Top (icon = ICON
                              ,title = sh.List([PRODUCT,VERSION]).space_items()
                              )
         self.set_buttons()
@@ -23,12 +23,12 @@ class Menu:
         
     def set_buttons(self):
         self.btn1 = sh.Button (parent = self.parent
-                              ,text   = _('Word Guesser')
-                              ,side   = 'top'
+                              ,text = _('Word Guesser')
+                              ,side = 'top'
                               )
         self.btn2 = sh.Button (parent = self.parent
-                              ,text   = _('Word Scrambler')
-                              ,side   = 'top'
+                              ,text = _('Word Scrambler')
+                              ,side = 'top'
                               )
         self.btn1.focus()
         
@@ -43,17 +43,17 @@ class Menu:
         return 'break'
     
     def set_bindings(self):
-        sh.com.bind (obj      = self.parent
+        sh.com.bind (obj = self.parent
                     ,bindings = ['<Control-q>','<Control-w>','<Escape>']
-                    ,action   = self.close
+                    ,action = self.close
                     )
-        sh.com.bind (obj      = self.parent
+        sh.com.bind (obj = self.parent
                     ,bindings = '<Down>'
-                    ,action   = self.focus_next
+                    ,action = self.focus_next
                     )
-        sh.com.bind (obj      = self.parent
+        sh.com.bind (obj = self.parent
                     ,bindings = '<Up>'
-                    ,action   = self.focus_prev
+                    ,action = self.focus_prev
                     )
 
     def show(self,event=None):

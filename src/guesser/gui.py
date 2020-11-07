@@ -18,13 +18,13 @@ class Guesser:
         self.lbl3.set_text(text)
     
     def set_bindings(self):
-        sh.com.bind (obj      = self.parent
+        sh.com.bind (obj = self.parent
                     ,bindings = ['<Control-w>','<Control-q>','<Escape>']
-                    ,action   = self.close
+                    ,action = self.close
                     )
     
     def set_frames(self):
-        self.frm  = sh.Frame (parent = self.parent)
+        self.frm = sh.Frame (parent = self.parent)
         self.frm1 = sh.Frame (parent = self.frm
                              ,expand = False
                              )
@@ -35,39 +35,39 @@ class Guesser:
                              )
         self.frmy = sh.Frame (parent = self.frm2
                              ,expand = False
-                             ,fill   = 'y'
-                             ,side   = 'right'
+                             ,fill = 'y'
+                             ,side = 'right'
                              )
         self.frm3 = sh.Frame (parent = self.frm
                              ,expand = False
-                             ,fill   = 'x'
-                             ,side   = 'bottom'
+                             ,fill = 'x'
+                             ,side = 'bottom'
                              )
         self.frmx = sh.Frame (parent = self.frm3
                              ,expand = False
-                             ,fill   = 'x'
+                             ,fill = 'x'
                              )
         self.frm4 = sh.Frame (parent = self.frm3
                              ,expand = False
-                             ,fill   = 'x'
+                             ,fill = 'x'
                              )
     
     def set_buttons(self):
         self.btn1 = sh.Button (parent = self.frm4
-                              ,side   = 'left'
-                              ,text   = _('Close')
-                              ,hint   = _('Close this window')
+                              ,side = 'left'
+                              ,text = _('Close')
+                              ,hint = _('Close this window')
                               ,action = self.close
                               )
         self.btn2 = sh.Button (parent = self.frm4
-                              ,side   = 'right'
-                              ,text   = _('Guess')
-                              ,hint   = _('Guess missing characters in the word')
+                              ,side = 'right'
+                              ,text = _('Guess')
+                              ,hint = _('Guess missing characters in the word')
                               )
     
     def set_region(self,height=20):
-        self.cvs.set_region (x       = self.width
-                            ,y       = height
+        self.cvs.set_region (x = self.width
+                            ,y = height
                             ,xborder = 5
                             ,yborder = 5
                             )
@@ -86,15 +86,15 @@ class Guesser:
                 message.insert(i,'\n')
         message = ''.join(message)
         self.lbl1 = sh.Label (parent = self.frm1
-                             ,text   = message
+                             ,text = message
                              ,expand = True
                              )
         self.ent1 = sh.Entry (parent = self.frm1
                              ,expand = True
-                             ,fill   = 'x'
+                             ,fill = 'x'
                              )
         self.lbl2 = sh.Label (parent = self.frm1
-                             ,text   = _('Guessed words:')
+                             ,text = _('Guessed words:')
                              ,expand = True
                              )
         self.cvs = sh.Canvas (parent = self.frm2
@@ -105,7 +105,7 @@ class Guesser:
                              )
         self.cvs.embed(self.frme)
         self.lbl3 = sh.Label (parent = self.frme
-                             ,text   = _('No match')
+                             ,text = _('No match')
                              ,expand = False
                              )
         self.ent1.focus()
@@ -113,15 +113,15 @@ class Guesser:
     def set_scroll(self):
         self.xscr = sh.Scrollbar (parent = self.frmx
                                  ,scroll = self.cvs
-                                 ,Horiz  = True
+                                 ,Horiz = True
                                  )
         self.yscr = sh.Scrollbar (parent = self.frmy
                                  ,scroll = self.cvs
                                  )
     
     def set_gui(self):
-        self.parent = sh.Top (icon   = ICON
-                             ,title  = _('Word Guesser')
+        self.parent = sh.Top (icon = ICON
+                             ,title = _('Word Guesser')
                              )
         self.set_frames()
         self.set_widgets()

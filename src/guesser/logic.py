@@ -13,9 +13,9 @@ class Guesser:
     
     def set_values(self):
         self.Success = True
-        self.file    = sh.objs.get_pdir().add('..','user','words.txt')
-        self.lst     = []
-        self.word    = ''
+        self.file = sh.objs.get_pdir().add('..','user','words.txt')
+        self.lst = []
+        self.word = ''
     
     def reset(self,word):
         f = '[WordGuesser] guesser.logic.Guesser.reset'
@@ -65,7 +65,7 @@ class Guesser:
                 timer = sh.Timer(f)
                 timer.start()
                 iread = sh.ReadTextFile(self.file)
-                text  = iread.get()
+                text = iread.get()
                 self.Success = iread.Success
                 if self.Success:
                     text = text.lower()

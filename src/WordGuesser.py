@@ -4,8 +4,8 @@
 import skl_shared.shared as sh
 from skl_shared.localize import _
 
-import menu.gui             as gi
-import guesser.controller   as gc
+import menu.gui as gi
+import guesser.controller as gc
 import scrambler.controller as sc
 
 

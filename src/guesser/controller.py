@@ -5,20 +5,20 @@ import skl_shared.shared as sh
 from skl_shared.localize import _
 
 import guesser.logic as lg
-import guesser.gui   as gi
+import guesser.gui as gi
 
 
 class Guesser:
 
     def __init__(self):
         self.logic = lg.Guesser()
-        self.gui   = gi.Guesser()
+        self.gui = gi.Guesser()
         self.set_bindings()
         
     def set_bindings(self):
-        sh.com.bind (obj      = self.gui.ent1
+        sh.com.bind (obj = self.gui.ent1
                     ,bindings = ['<Return>','<KP_Enter>']
-                    ,action   = self.guess
+                    ,action = self.guess
                     )
         self.gui.btn2.action = self.guess
     
